@@ -34,6 +34,26 @@ body {
 .idea-text {
     line-height: 1.8;
 }
+        /* Slick slider custom styles */
+        .slick-dots {
+            bottom: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .slick-dots {
+                bottom: 15px;
+            }
+            .slick-prev, .slick-next {
+                width: 40px;
+                height: 40px;
+            }
+            .slick-prev {
+                left: 10px;
+            }
+            .slick-next {
+                right: 10px;
+            }
+        }
 /* Slick slider custom styles */
 .slick-dots {
     bottom: 20px;
