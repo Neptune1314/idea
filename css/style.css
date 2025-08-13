@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Noto+Sans+Mongolian&display=swap');
+        
+body {
+    font-family: 'Montserrat', 'Noto Sans Mongolian', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.floating-btn {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+.logo {
+    width: 180px !important;
+}
+
+.category-chip {
+    transition: all 0.3s ease;
+}
+
+.category-chip:hover {
+    transform: scale(1.05);
+}
+
+.idea-text {
+    line-height: 1.8;
+}
+/* Slick slider custom styles */
+.slick-dots {
+    bottom: 20px;
+}
+
+.slick-dots li button:before {
+    color: white;
+    opacity: 0.5;
+    font-size: 10px;
+}
+
+.slick-dots li.slick-active button:before {
+    color: white;
+    opacity: 1;
+}
+
+.slick-prev, .slick-next {
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+}
+
+.slick-prev:before, .slick-next:before {
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 24px;
+    opacity: 0.7;
+    transition: all 0.3s;
+}
+
+.slick-prev:before {
+    content: '\f053';
+}
+
+.slick-next:before {
+    content: '\f054';
+}
+
+.slick-prev:hover:before, .slick-next:hover:before {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.slick-prev {
+    left: 20px;
+}
+
+.slick-next {
+    right: 20px;
+}
+
+.slide-title, .slide-desc {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease;
+}
+
+.slick-active .slide-title, 
+.slick-active .slide-desc {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slick-active .slide-title {
+    transition-delay: 0.3s;
+}
+
+.slick-active .slide-desc {
+    transition-delay: 0.6s;
+}

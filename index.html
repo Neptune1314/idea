@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ШИЖИМ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="min-h-screen">
+    <!-- Навбар -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <div class="text-2xl font-bold text-blue-600">
+                        <img class="logo" src="./img/logo.png" alt="">
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium">Нүүр</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium">Архив</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium">Тухай</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium">Холбоо барих</a>
+                    <div class="relative">
+                        <input type="text" placeholder="Хайх..." class="pl-10 pr-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white pb-4 px-4">
+            <a href="#" class="block py-2 text-gray-700 hover:text-blue-600">Нүүр</a>
+            <a href="#" class="block py-2 text-graimg-700 hover:text-blue-600">Архив</a>
+            <a href="#" class="block py-2 text-gray-700 hover:text-blue-600">Тухай</a>
+            <a href="#" class="block py-2 text-gray-700 hover:text-blue-600">Холбоо барих</a>
+            <div class="relative mt-2">
+                <input type="text" placeholder="Хайх..." class="w-full pl-10 pr-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!--   Үндсэн контент -->
+    <main class="max-w-6xl mx-auto px-4 py-8">
+        <!-- Slide Banner -->
+        <div class="banner-slider mb-12 rounded-xl overflow-hidden shadow-xl">
+            <div class="slide bg-gradient-to-r from-blue-500 to-indigo-600 p-8 md:p-12 text-white h-64 md:h-80 flex items-center">
+                <div class="max-w-2xl transform transition-all duration-1000">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 slide-title">Шинэлэг санаанууд</h2>
+                    <p class="text-xl md:text-2xl mb-6 slide-desc">Өдөр бүр шинэ бүтээлч санаанууд таныг хүлээж байна</p>
+                    <button class="px-6 py-3 bg-white text-blue-600 rounded-lg font-medium hover:bg-gray-100 transition transform hover:scale-105">
+                        Дэлгэрэнгүй <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="slide bg-gradient-to-r from-purple-500 to-pink-600 p-8 md:p-12 text-white h-64 md:h-80 flex items-center">
+                <div class="max-w-2xl transform transition-all duration-1000">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 slide-title">Онцлох санаа</h2>
+                    <p class="text-xl md:text-2xl mb-6 slide-desc">Манай шилдэг бүтээлч санаануудыг үзээрэй</p>
+                    <button class="px-6 py-3 bg-white text-purple-600 rounded-lg font-medium hover:bg-gray-100 transition transform hover:scale-105">
+                        Үзэх <i class="fas fa-star ml-2"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="slide bg-gradient-to-r from-green-500 to-teal-600 p-8 md:p-12 text-white h-64 md:h-80 flex items-center">
+                <div class="max-w-2xl transform transition-all duration-1000">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 slide-title">Санал хүсэлт</h2>
+                    <p class="text-xl md:text-2xl mb-6 slide-desc">Өөрийн санаагаа бидэнтэй хуваалцаарай</p>
+                    <button class="px-6 py-3 bg-white text-green-600 rounded-lg font-medium hover:bg-gray-100 transition transform hover:scale-105">
+                        Илгээх <i class="fas fa-paper-plane ml-2"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!--  Өнөөдрийн санаа -->
+        <section class="mb-12">
+            <div class="flex items-center mb-6">
+                <h1 class="text-3xl font-bold text-gray-800">Өнөөдрийн Бүтээлч Санаа</h1>
+                <span class="ml-4 px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">Шинэ</span>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-all duration-300">
+                <div class="md:flex">
+                    <div class="md:flex-shrink-0 md:w-1/3 bg-gradient-to-r from-blue-50 to-indigo-50 flex items-center justify-center p-8">
+                        <i class="fas fa-lightbulb text-8xl text-yellow-400 opacity-80"></i>
+                    </div>
+                    <div class="p-8 md:w-2/3">
+                        <div class="flex items-center mb-4">
+                            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium mr-3">Дижитал</span>
+                            <span class="text-gray-500 text-sm">2025 оны 08 сарын 15</span>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4" id="today-idea-title">Ухаалаг цэцэрлэгийн систем</h2>
+                        <p class="text-gray-600 idea-text mb-6" id="today-idea-desc">
+                            Цэцэрлэгийн ургамлыг автоматаар услаж, гэрэлтүүлэх ухаалаг систем. IoT төхөөрөмжүүд ашиглан чийгшил, температур, гэрлийн түвшинг хэмжиж, ургамлын хэрэгцээнд тохируулан автоматаар усалгаа хийнэ. Хэрэглэгч апп-аар алсын удирдлага хийх боломжтой.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-medium category-chip">IoT</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs font-medium category-chip">Автоматжуулалт</span>
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs font-medium category-chip">Цэцэрлэгжилт</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition flex items-center">
+                                <i class="fas fa-bookmark mr-2"></i> Хадгалах
+                            </button>
+                            <div class="flex space-x-3">
+                                <button class="p-2 text-gray-500 hover:text-blue-600 rounded-full hover:bg-blue-50 transition">
+                                    <i class="fas fa-thumbs-up"></i>
+                                </button>
+                                <button class="p-2 text-gray-500 hover:text-red-600 rounded-full hover:bg-red-50 transition">
+                                    <i class="fas fa-thumbs-down"></i>
+                                </button>
+                                <button class="p-2 text-gray-500 hover:text-green-600 rounded-full hover:bg-green-50 transition">
+                                    <i class="fas fa-share-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Санааны сан -->
+        <section>
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold text-gray-800">Санааны Сан</h2>
+                <div class="relative">
+                    <select class="appearance-none bg-white border border-gray-300 rounded-lg px-4 py-2 pr-8 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option>Бүгд</option>
+                        <option>Технологи</option>
+                        <option>Бизнес</option>
+                        <option>Боловсрол</option>
+                        <option>Эрүүл мэнд</option>
+                        <option>Хөгжилт</option>
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="ideas-container">
+                <!-- Санаанууд энд динамикаар үүснэ -->
+            </div>
+            
+            <div class="mt-8 flex justify-center">
+                <button class="px-6 py-3 bg-white border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition flex items-center">
+                    <i class="fas fa-plus mr-2"></i> Илүү санаа үзэх
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Хөл хэсэг -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Бүтээлч Санаа</h3>
+                    <p class="text-gray-400">Өдөр бүр танд шинэлэг, бүтээлч санаануудыг хүргэх зорилготой.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Холбоос</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Нүүр</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Архив</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Тухай</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Үйлчилгээний нөхцөл</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Холбоо барих</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-gray-400"><i class="fas fa-envelope mr-2"></i> shijimstore@gmail.com</li>
+                        <li class="flex items-center text-gray-400"><i class="fas fa-phone mr-2"></i> +976 95775666</li>
+                        <li class="flex items-center text-gray-400"><i class="fas fa-map-marker-alt mr-2"></i> Улаанбаатар хот</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Сошиал</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/ShijimStore" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-blue-600 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-pink-600 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-blue-400 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-red-600 transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                    <div class="mt-6">
+                        <p class="text-gray-400 mb-2">Бидэнтэй нэгдэх</p>
+                        <div class="relative">
+                            <input type="email" placeholder="И-мэйл хаяг" class="w-full px-4 py-2 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <button class="absolute right-2 top-1/2 transform -translate-y-1/2 text-blue-400 hover:text-blue-300">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2025 Бүтээлч Санаа. Бүх эрх хуулиар хамгаалагдсан.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Хөвөгч товч -->
+    <div class="fixed bottom-8 right-8">
+        <button class="w-14 h-14 bg-blue-600 text-white rounded-full shadow-xl flex items-center justify-center hover:bg-blue-700 transition floating-btn">
+            <i class="fas fa-plus text-xl"></i>
+        </button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>     
