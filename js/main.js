@@ -113,28 +113,36 @@ function updateDailyIdea() {
 setInterval(updateDailyIdea, 86400000); // 24 цагт нэг удаа
 
 // Initialize Slick slider
-$(document).ready(function () {
-  $(".banner-slider").slick({
-    dots: true,
-    arrows: true,
-    infinite: true,
-    speed: 800,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    fade: true,
-    cssEase: "cubic-bezier(0.7, 0, 0.3, 1)",
-    pauseOnHover: false,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          arrows: false,
-        },
-      },
-    ],
-  });
+        $(document).ready(function(){
+            $('.banner-slider').slick({
+                dots: true,
+                arrows: true,
+                infinite: true,
+                speed: 800,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 5000,
+                fade: true,
+                cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
+                pauseOnHover: false,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            arrows: true,
+                            dots: true
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            arrows: false,
+                            dots: true
+                        }
+                    }
+                ]
+            });
 });
 
 // Хөвөгч товчны event listener
